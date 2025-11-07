@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1,">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+	
+<style>
+	
+	*{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+			font-family: 'Segoe UI', sans-serif;
+		}
+	
+	body{
+			background-color: #1d1d23;
+			overflow-x: hidden;
+		}
+	
+	
+
+a{
+	color: white;
+	font-weight: bolder;
+}
+		
+/*Navbar section*/
+		
+.nav-container {
+  max-width: 1200px;	
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff6b00;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-bar {
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.order-btn {
+  background-color: #ff6b00;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.order-btn:hover {
+  background-color: #e85d00;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgba(0,0,0,0.50);
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    align-self: center;
+  }
+}
+		
+	/*Navbar section End*/
+	
+
+	 /*gallery section*/		
+
+	 .gallery-section {
+      padding: 60px 15px;
+      background-color: #1a1a1a;
+    }
+
+    .gallery-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #ff6b00;
+      margin-bottom: 2.5rem;
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.05);
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 8px;
+    }
+		
+		
+	 .card-body {
+      padding: 1rem;
+      text-align: center;
+	  background-color: rgba(0,0,0,0.90);
+    }
+
+    .product-name {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #ffffff;
+    }
+	
+		.gallery-img {
+      object-fit: cover;
+      height: 200px;
+      width: 100%;
+    }
+		
+/*-- food-gallery card hover-*/
+		.card:hover{
+			transition: all 0.3s ease;
+		}
+		.card:hover{
+			transform: scale(1.15);
+		}		
+	/*gallery section End*/
+
+	
+	
+	
+		
+		/*-- menu card hover-*/
+		.card:hover{
+			transition: all 0.3s;
+		}
+		.card:hover{
+			transform: scale(1.15);
+		}
+		
+		a{
+			color: white;
+			font-weight: bolder;
+		}
+		
+		.col-lg-4{
+			padding: 2rem;
+		}
+		
+		.icon-s i{
+			padding: 10px;
+			
+		}
+		.icon-s a :hover{
+			transition: all 0.3s;
+			transform: scale(1.15);
+		}
+		
+		.nav-bottom li{
+			padding: 20px;
+		}
+		
+	
+</style>
+	
+<header>
+	<!-- Navbar Start-->
+        
+<section class="navbar-sec">
+	 <div class="nav-container">
+      <nav class="navbar fixed-top" style="background-color: rgba(0,0,0,0.50)">
+       
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+          &#9776;
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="menu.html">MENU</a></li>
+		  <li><a href="Gallery.html">GALLERY</a></li>
+          <li><a href="About-Us.html">ABOUT</a></li>
+          <li><a href="Contact Us.html">CONTACT</a></li>
+		  <li><a href="Location.html">LOCATION</a></li>
+		  
+        </ul>
+		  
+		  <!-- Center: Logo -->
+        <div class="logo mr-5">
+          <img src="group 1/LOGO.png" alt="Food Logo" />
+        </div>
+
+        <!-- Right Side -->
+        <div class="nav-right">
+          <input type="text" placeholder="Search food..." class="search-bar" />
+          <button class="order-btn">Search</button>
+        </div>
+      </nav>
+    </div>
+</section>
+	
+	<!-- Navbar Start End-->
+	
+	
+<body>
+
+
+	 <!--food-gallery-->
+	
+
+	<section class="gallery-section mt-5">
+  <div class="container">
+    <h2 class="gallery-title" style="color: white">OUR DELICIOUS GALLERY</h2>
+    <div class="row">
+      <!-- Gallery Items -->
+      <div class="col-md-4 mb-4 gallery-item">
+		   <div class="card gallery-card">
+        <img src="group 4/20130712_14_groenteburger.jpg" class="gallery-img" alt="Burger">
+		 <div class="card-body">
+            <div class="product-name">Classic Burger</div>
+          </div>
+        </div>
+		</div>
+      <div class="col-md-4 mb-4 gallery-item">
+		  <div class="card gallery-card">
+        <img src="group 3/Pizza_.png" class="gallery-img" alt="Pizza">
+			  <div class="card-body">
+				  <div class="product-name">Pizza</div>
+		 </div>
+		 </div>
+      </div>
+      <div class="col-md-4 mb-4 gallery-item">
+		  <div class="card gallery-card">
+        <img src="group 4/Pasta.png" class="gallery-img" alt="Pasta">
+			  <div class="card-body">
+				  <div class="product-name">Pasta</div>
+		 </div>
+		 </div>
+      </div>
+      <div class="col-md-4 mb-4 gallery-item">
+		  <div class="card gallery-card">
+        <img src="group 4/Dosa .png" class="gallery-img" alt="Dosa">
+			  <div class="card-body">
+		  <div class="product-name">Dosa</div>
+	  </div>
+	 </div>		  
+      </div>
+      <div class="col-md-4 mb-4 gallery-item">
+		  <div class="card gallery-card">
+        <img src="group 4/Dessert 1.png" class="gallery-img" alt="Dessert">
+			  <div class="card-body">
+		  <div class="product-name">Dessert</div>
+		 </div>
+		 </div>	  
+      </div>
+      <div class="col-md-4 mb-4 gallery-item">
+		  <div class="card gallery-card">
+        <img src="group 4/Pumpkin-Pudding.jpg" class="gallery-img" alt="pumpkin-pudding">
+			  <div class="card-body">
+		  <div class="product-name">Pumpkin-Pudding</div>
+		 </div>
+		 </div>	  
+      </div>
+    </div>
+  </div>
+</section>
+
+	 
+                     <!--food-gallery-End-->
+	
+	
+	 <!--Bottom Nav-->
+	
+	<section class="bottom-nav" style=" background-color: #3a3a40; height: 436px">
+		<div class="image-logo">
+			<div class="container">
+ <img src="group 8/LOGO2.png" alt="logo-2" class="mx-auto d-block pt-5 img-fluid" style="width:381px;"> 
+</div>
+			<div class="nav-bottom">
+				<nav class="navbar navbar-expand-sm text-white justify-content-center">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Services</a>
+    </li>
+	   <li class="nav-item">
+      <a class="nav-link" href="#">Foods</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Contact</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Location.html">Location</a>
+    </li>
+  </ul>
+</nav> 
+</div>
+</div>
+		
+<div class="icon-s mx-auto text-center">
+				<a href="#"><i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i></a>
+				<a href="#"><i class="fab fa-google fa-2x" style="color: #dd4b39;"></i></a>
+				<a href="#"><i class="fab fa-instagram fa-2x" style="color: #ac2bac;"></i></a>
+				<a href="#"><i class="fab fa-youtube fa-2x" style="color: #ed302f;"></i></a>
+				<a href="#"><i class="fab fa-whatsapp fa-2x" style="color: #25d366;"></i></a>
+			</div>
+			<footer class="bg-body-tertiary text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2020 Copyright:
+    <a class="text-body" href="https://mdbootstrap.com/">foodlover.com Design by Akash Sharma</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+	</section>	
+			
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</body>
+</header>	
+	<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</html>
